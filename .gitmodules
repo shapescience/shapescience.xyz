@@ -1,0 +1,3 @@
+[submodule "themes/casper-two"]
+	path = themes/casper-two
+	url = https://github.com/shapescience/hugo-casper-two
