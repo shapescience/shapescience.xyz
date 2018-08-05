@@ -55,6 +55,7 @@ npm run-script deploy
 
 
 ## TODO
+- commit `/static`
 - check metatags
 - check mathjax issues
 - add syntax highlighting
