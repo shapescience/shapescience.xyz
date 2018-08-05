@@ -1,0 +1,14 @@
+{
+  "name": "shapescience.xyz",
+  "version": "1.2.0",
+  "description": "ShapeScience blog",
+  "main": "index.js",
+  "scripts": {
+    "test":   "echo \"Error: no test specified\" && exit 1",
+    "server": "./hugo -t casper-two -w server --bind=0.0.0.0 --navigateToChanged --baseURL=35.180.21.73 -D",
+    "build":  "hugo -t casper-two",
+    "deploy": "aws s3 sync public/ s3://shapescience.xyz --delete --profile arthur"
+  },
+  "author": "Arthur Flam",
+  "license": "ISC"
+}

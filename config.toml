@@ -1,0 +1,93 @@
+baseurl = "https://shapescience.xyz/"
+languageCode = "en-us"
+title = "ShapeScience"
+
+theme = "casper-two"
+
+googleAnalytics = "UA-42364112-9"
+
+# http://themes.gohugo.io/casper/
+# hugo new -t casper post/my-post.md
+
+EnableEmoji = true
+footnoteReturnLinkContents = "↩"
+
+# https://gohugo.io/content-management/syntax-highlighting/
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
+PygmentsCodeFences = true
+
+paginate = 10
+DisqusShortname = "shapescience"
+
+canonifyurls = true
+[permalinks]
+  post = "/blog/:title/"
+  page = "/:title/"
+
+
+[params]
+  title = "ShapeScience"
+  subtitle = "Arthur Flam's blog on algorithms and data science. It's slowly taking shape!"
+  description = "Arthur Flam's blog on algorithms and data science. It's slowly taking shape!"
+  metaDescription = ""
+  Copyright = "All rights reserved - 2018"
+  showSubscribe = true
+
+  cover = "images/Black-Abstraction-Georgia-O-Keeffe.jpg"
+  shareimage = "images/shape-shapescience-okeefe.png"
+  author = "shapescience"
+  logo = "images/logo.white.svg"
+  logodark = "images/logo.black.svg"
+  # old syntax
+  googleAnalyticsUserID = "UA-42364112-9"
+  googleAnalytics = "UA-42364112-9"
+
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  # RSSLink = "http://feeds.feedburner.com/..."
+  twitterName = "shape_science"
+  facebookName = "shapescience"
+  fbName = "shapescience"
+  githubName = "shapescience"
+
+  # linkedinName = ""
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = false
+  showSupport = true
+
+
+[[menu.main]]
+name = "Home"
+url = "https://shapescience.xyz"
+weight = 0
+[[menu.main]]
+name = "Forum"
+url = "https://talk.shapescience.xyz"
+weight = -114
+
+[blackfriday]
+angledQuotes = true
+# hrefTargetBlank = true
+
+[related]
+includeNewer = true
+toLower = true
+threshold=0
+
+[[related.indices]]
+name = "keywords"
+weight = 150
+[[related.indices]]
+name = "tags"
+weight = 150
+[[related.indices]]
+name  = "author"
+toLower = true
+weight = 30
+[[related.indices]]
+name  = "tags"
+weight = 100
+[[related.indices]]
+name  = "date"
+weight = 10
+pattern = "2006"
