@@ -67,8 +67,7 @@ Let's say we now think of the graph nodes as points on map. What do we get?
 
 The key goal here is to [preprocess reasonnably](http://www.shortestpaths.com/spq-survey.pdf) the network graph so that subsequent queries are sped up as much as possible. Many algorithms exist --- leading to enourmous gains over naive Djikstra --- with different preprocessing trade-offs:[^2]
 
-{{< figure class="figure-400" src="/images/benchmark-road-networks-pathfinding-planning-algorithms.png">}}
-
+<img style="max-width: 400px;" src="/images/benchmark-road-networks-pathfinding-planning-algorithms.png" alt="benchmark of road networks pathfinding planning algorithms"/>
 
 ### Road networks: the realm of informed search?
 When we go somewhere we usually have an idea of the direction. We can thus do an informed search for the best path. The simplest algorithm to use this idea is [A*](https://en.wikipedia.org/wiki/A*_search_algorithm), an improvement over Djikstra that adds to the priority scores a lower-bound estimation of the remaining distance to the target.

@@ -26,7 +26,7 @@ A digital signal is a stream of `0` and `1`. In order to transmit it, the simple
 
 <script type="text/paperscript" src="/js/ask.js" canvas="ook"></script>
 
-> <canvas height="150" width="500" id="ook" constellation="ook" step symbol_i=0></canvas>
+> <canvas height="150" width="350" id="ook" constellation="ook" step symbol_i=0></canvas>
 > 
 > **click** to change the next symbol sent<br>
 > **drag** left-right to change the clock frequency
@@ -36,7 +36,7 @@ Couldn't we be subtle? If we can tell them apart, why not use multiple *intensit
 
 <script type="text/paperscript" src="/js/ask.js" canvas="ask4"></script>
 
-<canvas height="150" width="500" id="ask4" constellation="ask4" step symbol_i=0></canvas>
+<canvas height="150" width="350" id="ask4" constellation="ask4" step symbol_i=0></canvas>
 
 The different chunks of signal we send are called *[symbols](https://en.wikipedia.org/wiki/Symbol_rate)*. Here, we encounter a powerful idea of signal transmission:
 
@@ -58,13 +58,13 @@ Optical transmissions use... light! Talking only about the signal intensity is t
 Here could be a representation of the unmodulated signal lasers sends:
 <script type="text/paperscript" src="/js/wave.js" canvas="wave"></script>
 
-> <canvas height="150" width="500" id="wave"></canvas>
+> <canvas height="150" width="350" id="wave"></canvas>
 
 Our amplitude-modulated signal might look like this[^frequencies-carrier-signal]:
 
 <script type="text/paperscript" src="/js/ask.js" canvas="ask4_signal"></script>
 
-> <canvas height="150" width="500" id="ask4_signal" guide constellation="ook_laser"  symbol_i=0></canvas>
+> <canvas height="150" width="350" id="ask4_signal" guide constellation="ook_laser"  symbol_i=0></canvas>
 
 _**Reminders**: the intensity we drew earlier is a mean of the square of the raw signal._
 
@@ -84,11 +84,11 @@ How come our amplitude-modulated signals spread over an interval of wavelengths?
 
 Because of this, we are forced to use **channels**, separated by [guard bands](https://en.wikipedia.org/wiki/Guard_band) to avoid interference[^superchannels]. *The next 3 figures are from [an amazing presentation on optics](https://www.nanog.org/sites/default/files/Steenbergen.Everything_You_Need.pdf)*
 
-{{< figure class="figure-400" alt="Relative WDM channel width" src="/images/wdm-channels.png">}}
+<img style="max-width: 400px;" alt="Relative WDM channel width" src="/images/wdm-channels.png"/>
 
 Over the years, better WDM technology (Coarse/Dense/UltraDense) led to ever narrower channels:
 
-{{< figure class="figure-200" alt="Relative DWDM channel width" src="/images/wdm-dwdm-udwdm-channel-width.png">}}
+<img  style="max-width: 200px;" alt="Relative DWDM channel width" src="/images/wdm-dwdm-udwdm-channel-width.png"/>
 
 [^modulation-bandwidth]: How much spectrum is used depends on the modulation. [Spectral shaping](https://en.wikipedia.org/wiki/Raised-cosine_filter) can limit the bandwidth used and improve [intersymbol interference](https://en.wikipedia.org/wiki/Intersymbol_interference).
 [^superchannels]: The grid can be broken down for even better spectral efficiency and flexibility. Read about WDM [flex-grid and super-channels](http://www.lightwaveonline.com/articles/print/volume-30/issue-2/Features/superchannels-flex-grid-multilayer-switching.html).
@@ -96,7 +96,7 @@ Over the years, better WDM technology (Coarse/Dense/UltraDense) led to ever narr
 #### Optical fibers' usable frequencies are bounded
 Optical fiber are not perfectly transparent. There is always a loss: eventually we can't tell the signal [apart from the noise](https://en.wikipedia.org/wiki/Shannon%E2%80%93Hartley_theorem). This signal attenuation depends on the light's wavelenth:
 
-{{< figure class="figure-400" alt="Fiber attenuation" src="/images/attenuation-fibers.png">}}
+<img style="max-width: 400px;" alt="Fiber attenuation" src="/images/attenuation-fibers.png"/>
 
 There are more restrictions[^bands-dispersion]! [Optical amplifiers](https://en.wikipedia.org/wiki/Optical_amplifier) can only be used with a limited range of wavelengths... All others are limited to short-range applications.
 
@@ -129,7 +129,7 @@ In Binary Phase-Key Shifting [BPSK](https://en.wikipedia.org/wiki/Phase-shift_ke
 <script type="text/paperscript" src="/js/psk.js" canvas="qpsk"></script>
 <script type="text/paperscript" src="/js/psk.js" canvas="qam8"></script>
 
-> <canvas height="150" width="500" id="bpsk" constellation="bpsk"></canvas>
+> <canvas height="150" width="350" id="bpsk" constellation="bpsk"></canvas>
 > 
 > *The signal is now the projection of a late/early clock.*
 
@@ -137,13 +137,13 @@ If you add two of those signals, you can have 90 degrees (quadrature) shifts: [Q
 
 [^qpsk-origin]: Smart line codes and variants can avoid symbol transitions through the origin.
 
-> <canvas height="150" width="500" id="qpsk" constellation="qpsk"></canvas>
+> <canvas height="150" width="350" id="qpsk" constellation="qpsk"></canvas>
 > 
 > *On the left, you can recognize the symbols used.*
 
 Constellations can be even fancier by modulating both phase and amplitude. Here is what 8QAM looks like:
 
-> <canvas height="150" width="500" id="qam8" constellation="qam8" symbol_i=4></canvas>
+> <canvas height="150" width="350" id="qam8" constellation="qam8" symbol_i=4></canvas>
 
 **Signal over noise requirements end up limiting the constellation complexity.**
 

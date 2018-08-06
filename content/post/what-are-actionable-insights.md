@@ -54,7 +54,7 @@ Here is some advice for data projects:
 
 In a recent review on [automation](http://www.mckinsey.com/industries/oil-and-gas/our-insights/digitizing-oil-and-gas-production), McKinsey introduced a funnel showing many steps where data initiatives can fail due to what they call "data leakage":
 
-{{< figure src="/images/digital-funnel-failure-data-projects.svg" alt="funnel of failures for digital projects" >}}
+![Funnel of failures for digital projects](/images/digital-funnel-failure-data-projects.svg)
 
 ## Do you even want actionable insight?
 Many companies have in place scoring engines for marketing, lead prioratization, recommendations, etc. In those firms, actionable insight feels outdated. For them the goal is simple: improve predictive models.
