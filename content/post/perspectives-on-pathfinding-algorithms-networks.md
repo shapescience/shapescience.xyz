@@ -1,87 +1,58 @@
 +++
-date = "2016-10-16T10:00:00Z"
+date = "2018-10-01T10:00:00Z"
 draft = false
-title = "Perspectives on pathfinding algorithms: Networks"
+title = "Pathfinding algorithms: Road and traffic networks"
+aliases = ["/blog/perspectives-on-pathfinfing-algorithms-networks/"]
 author = "arthur"
 tags = ["pathfinding", "road networks"]
-image = "images/Rain_Steam_and_Speed_the_Great_Western_Railway_cropped.jpg"
+image = "images/map.png"
 whitelogo = true
-artist = "William Turner"
+artist = "Tel Aviv - Google Maps"
 +++
-All computer scientists should know how to find their way. But not all researchers name this task the same.
+**Maps** are among the most used apps on our phones. We always need to go somewhere!
 
 <!--more-->
 
-A critical step in problem solving is [finding how to think](#soon-meir-from-anodot) about the problem at hand. This means *finding the correct abstraction* --- and naming it right. I usually start my projects by mapping all the related concepts. As one of my university teachers[^1] explained:
-
-> One way to succeed is to be the last to rediscover a powerful idea.
-> The solution to your issue certainly hides in a PhD thesis somewhere.
-
-[^1]: Nikos, of course.
-
-**When do we go from `A` to `B`?** Many problems can be framed as pathfinding, and different frameworks of thought will be useful depending on the application.
-
-In this blog posts series, our goal will be to *describe the problems* faced by those who study particular flavors of pathfinding, as well as insightful algorithms. We will start by reviewing "vanilla" graph pathfinding, just to recall the vocabulary. Then we'll describe richer problems: networks, maps, states, actions.
-
-## Vanilla pathfinding
-![simple undirected graph](/images/graph.gif)
-
-The context here is a graph, whose nodes are linked by edges. Which algorithms can help us find how to go from node `A` to node `B`?
-
-- [Breadth-first search (BFS)](https://en.wikipedia.org/wiki/Breadth-first_search) minimizes the number of hops.  
-- [Djikstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) enables the use of weights.
-- [Bi-directional search](https://en.wikipedia.org/wiki/Bidirectional_search) can save about 50% of the search effort. Check your termination conditions, it is trickier than it seems...
-
-Beside returning a decent path, a critical performance measure of a pathfinding algorithm is minimizing the search space. It should explore as little of the graph as possible.
-
-### Specialized needs
-- What happens when your graph is allowed negative weights? This is a big concern for general graphs, solved by the [Bellman-Ford](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm) algorithm.
-- In telecom networks the need for diverse protection routes leads to computing [k-shortest paths](https://en.wikipedia.org/wiki/K_shortest_path_routing) --- ideally edge or node disjoint, often with [Yen's algorithm](https://en.wikipedia.org/wiki/Yen%27s_algorithm) or [Suurballe](#).
-- Computing shortest distances between all points can be needed, and done by [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm).
-
-
-### "Low-level" questions
-Choosing an adequate [graph representation](http://www.boost.org/doc/libs/1_61_0/libs/graph/doc/graph_theory_review.html) can already make you answer a lot of questions: is your graph undirected? *Will your graph need to be updated? How sparse is it? Do you want fast adjacency queries?* If you setup a algorithm pipeline, chances are you will need to spend some time converting your graphs from one format to the other: [graph data-structures are often custom-made for a particular application](http://www.boost.org/doc/libs/1_61_0/libs/graph/doc/index.html).
-
-Your main options are [adjacency lists](https://en.wikipedia.org/wiki/Adjacency_list) and [adjacency matrices](https://en.wikipedia.org/wiki/Adjacency_matrix), best for sparse graphs[^degree-roads]. Wondering about [how to use sparse](http://docs.scipy.org/doc/scipy/reference/sparse.html#sparse-matrix-classes) adjacency matrices can make you go round in circles! Just implementing a [priority queue](https://en.wikipedia.org/wiki/Priority_queue) [for Djikstra](http://ad-teaching.informatik.uni-freiburg.de/route-planning-ss2011/lecture-2.pdf) can make you review your computer science basics!
-
-[^degree-roads]: The average degree of a [node in road networks](http://ad-teaching.informatik.uni-freiburg.de/route-planning-ss2012/lecture-1.pdf) is 2.5.
-
-## Road and traffic networks
-Let's say we now think of the graph nodes as points on map. What do we get?
-
-![small piece of a Tel Aviv map](/images/map.png)
-
-**Maps** are among the most used apps on our phones. We always need to go somewhere! The number of pathfinding features available to us via those applications is extraordinary. They encompass many expertise domains:
+## Maps are more complicated than pathfinding  
+The number of pathfinding-related features available to us via our phones' applications is extraordinary. Making Waze or Uber work requires many expertise domains:
 
 - **Collaborative real-time traffic**, with traffic prediction, feedback loops and certainly load balancing for the biggest providers.
 - **Schedule-based transportation networks**: for an introduction read this [description](https://research.googleblog.com/2016/03/an-update-on-fast-transit-routing-with.html) of [Transfer Patterns](http://ad.informatik.uni-freiburg.de/files/transferpatterns.pdf), or this comparaison [versus road networks](http://people.mpi-inf.mpg.de/~bast/papers/car_or_public_transport.pdf).
 - **Time-dependent** pathfinding is also crucial in the context of traffic congestion, through mainly quick updates of precomputations or smarter search. Do we want *earliest arrival* or *minimum travel time*? 
 - **Multi-modal transportation**: cars allow you unlimited travel, but few wants to walk long. This lead to [constrained search algorithms](http://www.boost.org/doc/libs/1_51_0/libs/graph/doc/r_c_shortest_paths.html) involving [labels](http://logistik.bwl.uni-mainz.de/Dateien/or_2004-01.pdf), and [optimizing multiple objectives](https://en.wikipedia.org/wiki/Multi-objective_optimization).
+- **Fleet management** for transportation services: you want a vehicule where there is or will be demand. When tranporting **multiple passengers**, you want to take a route that be fast and fair.
 - **Detours** to points of interest. This might be the basis for **[ride sharing](http://lekv.de/pub/Mitfahr-Paper.pdf)** algorithms. We can also end up into [many-to-many pathfinding](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.94.2368&rep=rep1&type=pdf) or delivery problems: [traveling salesman](https://en.wikipedia.org/wiki/Travelling_salesman_problem), [multiple salesmen](https://tech.zalando.com/blog/defeating-the-travelling-salesman-problem-for-warehouse-logistics/)... 
 - **Alternative itineraries** are [difficult](https://news.ycombinator.com/item?id=12190974): k-shortest-paths will give you thousands of tiny variations on the best route... You expect a *different route*, will only [specialized](http://algo2.iti.kit.edu/documents/Dissertation_Kobitzsch_Moritz.pdf) [algorithms](https://www.microsoft.com/en-us/research/wp-content/uploads/2010/01/alternativeSea2010.pdf) will yield.
 
 [^2]: Look no further for a thorough [overview of modern route planning on road networks](https://arxiv.org/pdf/1504.05140.pdf).
 
-> The next sections describe (selected) fruitful ideas allowing speed-ups for the single-source shortest path problem. *Please forgive omission of key details / inaccuracies; or better: tell me about them!*
+> From now on, let's focus on pathfinding, let's say the kind used in Google Maps to enable turn-by-turn navigation.
+
+
+## Pathfinding in road networks
+Billions of queries surely hit a service like Google Maps daily. People all over the world want to find itineraries across dense and large regions. To cope with the load and answer in a timely manner, using [standard graph algorithms](/blog/pathfinding-algorithms-graphs/) like Djikstra's is not enough. The key is **preprocessing**. The next sections describe some powerful ideas that allow speed-ups for the "single-source" shortest path problem.
+
+> *Please forgive omission of key details / inaccuracies; or better: tell me about them!*
 
 The key goal here is to [preprocess reasonnably](http://www.shortestpaths.com/spq-survey.pdf) the network graph so that subsequent queries are sped up as much as possible. Many algorithms exist --- leading to enourmous gains over naive Djikstra --- with different preprocessing trade-offs:[^2]
 
 <img style="max-width: 400px;" src="/images/benchmark-road-networks-pathfinding-planning-algorithms.png" alt="benchmark of road networks pathfinding planning algorithms"/>
 
 ### Road networks: the realm of informed search?
-When we go somewhere we usually have an idea of the direction. We can thus do an informed search for the best path. The simplest algorithm to use this idea is [A*](https://en.wikipedia.org/wiki/A*_search_algorithm), an improvement over Djikstra that adds to the priority scores a lower-bound estimation of the remaining distance to the target.
+A map is not just a graph: it's embedded in our physical workd. When we go somewhere we usually have an idea of the direction in which we're heading. The simplest algorithm to use this idea is [A*](https://en.wikipedia.org/wiki/A*_search_algorithm). This improvement over Djikstra adds to the node priority scores a lower-bound estimation of the remaining distance to the target.
 
-It seems natural to think that using the natural geometric embeddding of the network will be useful. However, our goal is minimize travel time -- not distance! Finding good travel time bounds is difficult ---because there are highways---, and A* quickly loses interest. Today, *no state-of-the-art algorithms make explicit use of coordinates*.
+However, *our* goal is usually to minimize travel time -- not distance! Finding good travel time bounds is difficult because speed limits vary between roads. The only A* heuristic we could use is "euclidian distance divided by the *maximum* road speed". In practive it is not that helpful.
+
+> Today, *no state-of-the-art algorithms make explicit use of map coordinates*.
 
 #### Goal-directed techniques
-A* fails in road networks because it uses unrealistic lower bounds. To counter this, we can precompute distances between all pairs within *well-chosen landmarks*[^landmarks], and embed them in our A* heuristic using the triangular inequality. This is the [ALT* algorithm](https://www.microsoft.com/en-us/research/publication/computing-the-shortest-path-a-search-meets-graph-theory/).
+A* fails in road networks because it uses unrealistic lower bounds. To counter this, we can precompute distances between all pairs of *well-chosen landmarks*[^landmarks], and embed them in our A* heuristic using the triangular inequality. This is the [ALT* algorithm](https://www.microsoft.com/en-us/research/publication/computing-the-shortest-path-a-search-meets-graph-theory/).
 
 [^landmarks]: Even choosing landmarks at random works ok, but using heuristics leads to better results. 
 
 > The distances between landmarks do not give us complete paths. As in many shortcut-based techniques we need to find smart ways to "unpack" the actual shortest path.
 
-The [*Geometric containers*](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.3662&rep=rep1&type=pdf) approach has all edges hint to which nodes they lead via a shortest path. This information is summarized by lightweight shapes like bounding boxes. This enables aggressive pruning at the cost of all-pairs preprocessing (ouch!).
+In the [*Geometric Containers*](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.3662&rep=rep1&type=pdf) approach, all edges store as metadata a hint that lists nodes they lead to via a shortest path. This information is summarized by simple shapes like bounding boxes. This enables aggressively pruning shortest path searches, but at the cost of all-pairs preprocessing (ouch!).
 
 ![bounding box used as a geometric container](/images/geometric-container-bounding-box.png) 
 
@@ -100,7 +71,7 @@ A number of *Separator Based* techniques try use partitions. The key is being ab
 Those techniques can involve cutting with either edges or nodes, or hierachies of overlay graphs... See for instance [Customizable Route Planning](https://www.microsoft.com/en-us/research/publication/customizable-route-planning/), used by Microsoft, an approach that allows fast re-weighting.
 
 
-### Road networks lend themselves to preprocessing
+### Why road networks lend themselves well to preprocessing
 Road networks are more than just planar graphs. When we go somewhere far we know we should first get on the highway. Intuitively, we understand that their **hierarchical structure** should help pathfinding *a lot*.
 
 One concept introduced to formalize and justify this idea is a graph's *[highway dimension](https://www.microsoft.com/en-us/research/publication/highway-dimension-and-provably-efficient-shortest-path-algorithms/)*, much similar to the [*doubling dimension*](http://www.cs.cmu.edu/~anupamg/adfocs/Gupta-lec3.pdf).
@@ -170,4 +141,4 @@ This leads to an alternate representation for our network graph. One where nodes
 - With all those algorithms, the time to compute a static path is *two order of magnitudes* lower than the time to retrieve it from a server or plot it..! It might seem overkill, but recall how many extra features we ask of routing engines...!
 
 
-*Stay tuned for part 2...*
+*Stay tuned for the next part of the series...*
