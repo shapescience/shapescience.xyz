@@ -14,6 +14,8 @@ t-SNE is great, but too bad you can't easily stream data and get updates. Can we
 <!--more-->
 
 > **Work In Progress:** this post series will be updated soon with live demos. Find the [source code here](https://github.com/shapescience/tsne-streaming).
+>
+> **Update** Google released as part of tensorboard a very effective GPU implementation of tSNE. [Check it out!](https://ai.googleblog.com/2018/06/realtime-tsne-visualizations-with.html).
 
 ![demo-app](https://raw.githubusercontent.com/shapescience/tsne-streaming/master/illustration.jpg)
 
@@ -53,9 +55,11 @@ As explained elegantly by [Andrej Karpathy](http://karpathy.github.io/2014/07/02
 _and the embedded space is based on the heavy-tailed Student **t**-distribution_. With a gaussian, far-away points would be seen as too far away in 2d; they would then tend to crush together --- the *crowding problem*:
 
 <div>$$q_{ij} = \frac{(1 + ||\boldsymbol{y}_i - \boldsymbol{y}_j)||^2)^{-1}}{Z}$$</div>
+
 <div>$$Z = (\sum_{k \neq l} (1 + ||\boldsymbol{y}_k - \boldsymbol{y}_l)||^2)^{-1}$$</div>
 
-*The [KL-divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) formulation [measuring the "difference between the distributions"] has the nice property that it is asymmetric in how it penalizes distances between the two spaces:*
+
+The *[KL-divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence) formulation [measuring the "difference between the distributions"] has the nice property that it is asymmetric in how it penalizes distances between the two spaces:*
 
 <div>$$cost = KL(P|Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}$$</div>
 
