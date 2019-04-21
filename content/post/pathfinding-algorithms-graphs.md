@@ -1,5 +1,5 @@
 +++
-date = "2018-10-01T10:00:00Z"
+date = "2018-10-02T10:00:00Z"
 draft = false
 title = "Pathfinding algorithms: Graphs"
 author = "arthur"

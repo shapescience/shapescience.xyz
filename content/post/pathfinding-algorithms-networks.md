@@ -1,5 +1,5 @@
 +++
-date = "2018-10-01T10:00:00Z"
+date = "2018-10-03T10:00:00Z"
 draft = false
 title = "Pathfinding algorithms: Road and traffic networks"
 aliases = ["/blog/perspectives-on-pathfinfing-algorithms-networks/"]
@@ -123,7 +123,7 @@ By doing this, we are sure those sets of nodes (aka node *labels*) obey the cove
 
 [Hub labeling](https://www.microsoft.com/en-us/research/publication/a-hub-based-labeling-algorithm-for-shortest-paths-on-road-networks/) can be [improved](http://i11www.iti.uni-karlsruhe.de/extra/publications/adgw-hhlsp-12.pdf) or adapted: many nodes will share the same sequence of large-scale hubs, and it is possible to [compress this information](https://www.microsoft.com/en-us/research/wp-content/uploads/2014/07/complexTR-rev2.pdf).
 
-### Graph models for road networks are not always what you would expect
+## Graph models for road networks are not always what you would expect
 A road network links "nodes" together via road segments you travel on at some expected speed. No surprise: using directed edges will let you model *roads* better. You might think it is a good idea to compute distances using [great circles](https://en.wikipedia.org/wiki/Great_circle) -- but you don't really need it.
 
 But wait a second, what about getting those turn-by-turn instructions? Well, even before that, how do you model turning restriction? Traffic lights delays? What about your reluctance to turn left, [like UPS trucks](https://priceonomics.com/why-ups-trucks-dont-turn-left/), or slowdowns from sharp turns?
@@ -134,7 +134,7 @@ This leads to an alternate representation for our network graph. One where nodes
 
 [MapBox](https://www.mapbox.com/blog/smart-directions-with-osrm-graph-model/) went into some details about this question, take a look! You can also read [details on OSRM's pre-processing flow here](https://github.com/Project-OSRM/osrm-backend/wiki/Processing-Flow). It contains an explanation on how their turn-by-turn guidance and turn-restriction are enabled.
 
-### Closing thoughts for network pathfinding
+## Closing thoughts for network pathfinding
 - The amount of work that went into those algorithms is **astounding**.
 - Check [PHAST](https://www.microsoft.com/en-us/research/publication/phast-hardware-accelerated-shortest-path-trees/) for Djikstra with better performance/locality.
 - For extra information, [openTripPlanner](http://www.opentripplanner.org/) project has a [great bibliography](https://github.com/opentripplanner/OpenTripPlanner/blob/master/docs/Bibliography.md). Reviews of the field are [plentiful](http://www.shortestpaths.com/spq-survey.pdf).

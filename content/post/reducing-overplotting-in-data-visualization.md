@@ -18,7 +18,8 @@ Nothing spoils a plot like (too much) data.
 
 Managing information density is critical for effective visualizations. Good graphics let us understand global shape as well as finer details like outliers. We need a *dynamic range* in visualization, much like in photography with [HDR](https://en.wikipedia.org/wiki/High-dynamic-range_imaging).
 
-![Tel Aviv port, illuminated with HDR](/images/Tel-Aviv-Port_long-exposure_HDR.jpg)
+![Tel Aviv port, illuminated with HDR](/images/Tel-Aviv-Port_long-exposure_HDR.small.jpg)
+*[Tel Aviv port, illuminated with HDR](https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:Tel-Aviv_Port_(long-exposure_HDR).jpg)*
 
 It's clear [scatterplots don't scale](#soon-a-new-article-on-how-classic-viz-dont-scale). But while overplotting is unavoidable well before big data, it is possible to mitigate it and limit symbol saturation.<br>
 **[Above all show the data!](https://en.wikipedia.org/wiki/Edward_Tufte)** Let's see how.

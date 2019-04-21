@@ -4,8 +4,6 @@ title       = "Backlog"
 artist = "Kandinsky"
 image = "images/kandinskywcpencil-painting-14.jpg"
 description = "A glimps at the next articles I'll publish. When I find time."
-[menu.main]
-weight = -2
 +++
 
 > You have better/fun ideas? Please tell me!
@@ -20,9 +18,6 @@ Here is my current backlog. Don't hesitate to comment and tell me what you are m
 - Optical modulation (part II+).
 - tSNE+streaming (part II+).
 - Linear Programming for optical network optimization.
-- Pathfinding: rewrite a proper introduction - review common graph issues.
-- Pathfinding: can we do better then Djikstra?
-- Pathfinding: even more topics!
 
 ![map of topics and useful algorithms for pathfinding](/images/pathfinding-landscape.png)
 
