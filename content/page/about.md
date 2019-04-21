@@ -13,18 +13,12 @@ weight = -1
 
 Your feedback is very welcome, do not hesitate to [contact me](mailto:arthur.flam@gmail.com).
 
-> Find my social profiles on [LinkedIn](https://www.linkedin.com/in/arthurflam/) and [Twitter](https://twitter.com/ArthurFlam)
+> I'm on [LinkedIn](https://www.linkedin.com/in/arthurflam/) and [Twitter](https://twitter.com/ArthurFlam)
 
-
-## How do I solve problems?
-- Pragmatism and skepticism
-- Deep scientific background: always be learning
-- Broad software engineering skills: let's make it happen!
-
-> Above all, I promote development processes with short feeback loops.
 
 ## At work
-Since 2017, I've been working at **[Samsung](https://www.samsung.com)** as an algorithm engineer. Our group focuses on a novel neuromorphic image sensor [[overview]](https://inivation.com/dvs/) [[resources]](https://github.com/uzh-rpg/event-based_vision_resources). We work on signal processing and classic computer vision applications, sprinkled with deep learning.
+Since 2017, I've been working at **[Samsung](https://www.samsung.com)** as a senior algorithm engineer.
+I started working neuromorphic image sensors [[overview]](https://inivation.com/dvs/) [[resources]](https://github.com/uzh-rpg/event-based_vision_resources), and I am now working on our processes: quality, software engineering, collaboration...
 
 Previously, I collaborated with [ECI Telecom](http://www.ecitele.com/)'s CTO, and build cyber/SDN proofs-of-concept.
 
@@ -34,7 +28,6 @@ Back in France, I co-founded a company, Lookies. With my dear friend [Louis](htt
 The French readers may be interested to know I studied at Louis le Grand.*
 
 ## Personnal life
-I've been living since 2015 in Israel with my amazing wife Chloé. Here we are with our wonderful daughter.
-
+I've been living since 2015 in Israel with my amazing wife Chlé and our wonderful daughters!
 
 ![us-three](/images/nous-trois.jpg)
