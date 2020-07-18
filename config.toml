@@ -64,10 +64,10 @@ canonifyurls = true
 name = "Home"
 url = "https://shapescience.xyz"
 weight = 0
-[[menu.main]]
-name = "Forum"
-url = "https://talk.shapescience.xyz"
-weight = -114
+#[[menu.main]]
+#name = "Forum"
+#url = "https://talk.shapescience.xyz"
+#weight = -114
 
 [blackfriday]
 angledQuotes = true
