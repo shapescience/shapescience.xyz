@@ -4,7 +4,7 @@ title       = "About"
 # artist = "Kandinsky"
 # image = "images/Black-Abstraction-Georgia-O-Keeffe.jpg"
 # image = "images/kandinskywcpencil-painting-14.jpg"
-description = "A few words about the ShapeScience and its author."
+description = "A few words about the blog and its author."
 [menu.main]
 weight = -1
 +++
@@ -14,7 +14,6 @@ weight = -1
 Your feedback is very welcome, do not hesitate to [contact me](mailto:arthur.flam@gmail.com).
 
 > I'm on [LinkedIn](https://www.linkedin.com/in/arthurflam/) and [Twitter](https://twitter.com/ArthurFlam)
-
 
 ## At work
 Since 2017, I've been working at **[Samsung](https://www.samsung.com)** as a senior algorithm engineer.
@@ -28,6 +27,9 @@ Back in France, I co-founded a company, Lookies. With my dear friend [Louis](htt
 The French readers may be interested to know I studied at Louis le Grand.*
 
 ## Personnal life
-I've been living since 2015 in Israel with my amazing wife Chlé and our wonderful daughters!
+I've been living since 2015 in Israel with my amazing wife Chloé and our wonderful daughters!
 
 ![us-three](/images/nous-trois.jpg)
+
+If you are feeling hungry, visit [pitaetchocolat.com](https://pitaetchocolat.com).
+

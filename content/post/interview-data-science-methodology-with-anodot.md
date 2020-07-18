@@ -9,7 +9,7 @@ title = "Interview: data science methodology"
 tags = ["interview", "datascience", "advice", "best practices"]
 +++
 
-*I am happy to count [Meir Toledano](https://il.linkedin.com/in/meirtoledano/en) as ShapeScience's first interviewee. At Anodot, one of Israel's hottest startups, he develops real-time anomaly detection algorithms.*
+*I am happy to count [Meir Toledano](https://il.linkedin.com/in/meirtoledano/en) as Shapescience's first interviewee. At Anodot, one of Israel's hottest startups, he develops real-time anomaly detection algorithms.*
 
 <!--more-->
 

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 154 154" xmlns="http://www.w3.org/2000/svg">
+  <style>
+   rect {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    fill: #ffffff;
+   }
+   .logo:hover #sq1 { fill: #fe77ff;}
+   .logo:hover #sq2 { fill: #ead186;}
+   .logo:hover #sq3 { fill: #9f9e9e;}
+   .logo:hover #sq4 { fill: #311ac5;}
+  </style>
+ <g class="logo">
+  <rect id="sq1" height="50" width="50" y="104" x="0" />
+  <rect id="sq2" height="50" width="50" y="104" x="52" />
+  <rect id="sq3" height="50" width="50" y="104" x="104" />
+  <rect id="sq4" height="50" width="50" y="0"   x="52" />
+  <rect id="sq5" height="50" width="50" y="52"  x="104" />
+ </g>
+</svg>

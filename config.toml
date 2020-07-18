@@ -1,6 +1,6 @@
 baseurl = "https://shapescience.xyz/"
 languageCode = "en-us"
-title = "ShapeScience"
+title = "Shapescience"
 
 theme = "casper-two"
 
@@ -8,7 +8,6 @@ googleAnalytics = "UA-42364112-9"
 
 # http://themes.gohugo.io/casper/
 # hugo new -t casper post/my-post.md
-
 EnableEmoji = true
 footnoteReturnLinkContents = "↩"
 
@@ -25,16 +24,21 @@ canonifyurls = true
   post = "/blog/:title/"
   page = "/:title/"
 
+[taxonomies]
+  category = "categories"
+  author = "authors"
+  tag = "tags"
+
 
 [params]
-  title = "ShapeScience"
+  title = "Shapescience"
   subtitle = "Arthur Flam's blog on algorithms and data science. It's slowly taking shape!"
   description = "Arthur Flam's blog on algorithms and data science. It's slowly taking shape!"
   metaDescription = ""
-  Copyright = "All rights reserved - 2018"
+  Copyright = "All rights reserved - 2020"
   showSubscribe = true
 
-  cover = "images/Black-Abstraction-Georgia-O-Keeffe.jpg"
+  cover = "images/Black-Abstraction-Georgia-O-Keeffe.upscaled.jpg"
   shareimage = "images/shape-shapescience-okeefe.png"
   author = "shapescience"
   logo = "images/logo.white.svg"

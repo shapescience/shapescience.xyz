@@ -3,7 +3,7 @@ Arthur Flam's personnal blog.
 
 > this README is a work in progress
 
-# Domain setup with AWS
+## Domain setup with AWS
 Follow the instructions:
 - https://agop.me/post/https-enabled-portfolio-hugo-s3-cloudfront.html
 - https://lustforge.com/2016/02/27/hosting-hugo-on-aws/
@@ -55,9 +55,14 @@ npm run-script deploy
 
 
 ## TODO
-- commit `/static`
-- check metatags
+Next:
+- publish
 - check mathjax issues
+- check fb sharer
+- save drafts / static
+
+Soon:
+- populate  forum
 - add syntax highlighting
 
 ```bash
@@ -65,10 +70,11 @@ npm run-script deploy
 # pip install Pygments
 ```
 
+- aws push
 - add a section for shorter articles
 - finish more drafts
 - asset pipeline: image resizing, compression, html/css
-- where does this go?
+- where did this go?
 ```
 {
 	"Version": "2008-10-17",
