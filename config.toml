@@ -32,10 +32,10 @@ canonifyurls = true
 
 [params]
   title = "Shapescience"
-  subtitle = "Arthur Flam's blog on algorithms and data science. It's slowly taking shape!"
-  description = "Arthur Flam's blog on algorithms and data science. It's slowly taking shape!"
+  subtitle = "Posts on algorithms, data science and software engineering. It's slowly taking shape!"
+  description = "Arthur Flam's blog on algorithms, data science and software engineering. It's slowly taking shape!"
   metaDescription = ""
-  Copyright = "All rights reserved - 2020"
+  Copyright = "All rights reserved - 2021"
   showSubscribe = true
 
   cover = "images/Black-Abstraction-Georgia-O-Keeffe.upscaled.jpg"
@@ -49,12 +49,11 @@ canonifyurls = true
 
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   # RSSLink = "http://feeds.feedburner.com/..."
-  twitterName = "shape_science"
+  twitterName = "ArthurFlam"
   facebookName = "shapescience"
-  fbName = "shapescience"
-  githubName = "shapescience"
-
-  # linkedinName = ""
+  # fbName = "shapescience"
+  githubName = "arthur-flam"
+  linkedinName = "ArthurFlam"
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
   hideHUGOSupport = false
   showSupport = true
