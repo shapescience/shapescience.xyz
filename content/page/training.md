@@ -1,38 +1,46 @@
 +++
-date        = "2018-08-21T09:00:00+02:00"
-title       = "Training"
+date        = "2021-08-21T09:00:00+02:00"
+title       = "Training & Consulting"
 artist = "Charles Sheeler, Criss-Crossed Conveyors, River Rouge Plant, Ford Motor Company"
 image = "images/Charles-Sheeler-Criss-Crossed-Conveyors.jpg"
 description = "Training options."
 author = "arthur"
+aliases = ["/training"]
 [menu.main]
 weight = -2
 +++
 
-
-I organize industry-focused workshops on *efficient algorithm engineering*.
+Contact me to organize workshops on algorithm engineering, or for consultations on how to improve your R&D workflows.
 
 <!--more-->
 
+## Common pain points I can address
+- **Pragmatic advice** to help make sense of MLOps/DevOpsInfra/Cloud solutions, decide what to buy/fork/build...
+- **Build a roadmap** to improve engineer workflows, collaboration and infrastructure across departments
+- **Implement solutions** to help your algorithm engineers and data scientists waste less time toiling with the "logistics" of preparing, organizing, comparing and sharing their experiments.
+- **Evangilize** the software engineering culture in organizations: reproduciblity, everything-as-code, data-driven...
+- **Create a Vision** fro infra/platform teams
+
+
 > [Contact me](mailto:arthur.flam@gmail.com) for more information.
 
-## Motivations and goals
+## Workshop sessions
 - **Help data scientists and algorithm engineers be more productive**
-  * Many companies don't have the ressources to teach junior team-members
   * Refreshers on algorithm development best practices
-  * Focus on tooling and automation  
+  * Tooling and automation
+  * How to communicate results
+  * Cultivating a product-first vision
 - **Spread the software engineering culture to algorithm engineers**
+  * Enncourage everything-as-code, reproducibility, data-driven approaches
   * Transitioning from writing scripts to building systems
-  * Help everybody understand code sharing and reuse 
+  * Help everybody understand code sharing and reuse
 - **Focused in-depth sessions**
+  * Workflows and CI for algorithm engineering.
+  * "Building web applications" for algorithm engineers: from python's streamlit to API and JS. When to make the switch?
+  * Software engineering for collaboration and reproducible science.
+  * Tour of the Python scientific computing ecosystem.
+  * Getting good-enough at visualization.
+  * Gluing open-source projects together.
+  * Quick wins for C++ projects
 
-## Examples of topics
-- Workflows and CI for algorithm engineering.
-- Python for algorithm engineers.
-- Software engineering for collaboration and reproducible science.
-- Getting good-enough at visualization.
-- Gluing open-source projects together.
-- C++ for normal people / software enginering with C++.
-- Rapid iteration with R.
-
-> Get in touch to customize a course for you.
+> [Get in touch](mailto:arthur.flam@gmail.com) to customize a course for you.
