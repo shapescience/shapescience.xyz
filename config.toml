@@ -42,7 +42,7 @@ DisqusShortname = "shapescience"
   description = "Arthur Flam's blog on algorithms, data science and software engineering. It's slowly taking shape!"
   metaDescription = ""
   Copyright = "All rights reserved - 2021"
-  showSubscribe = true
+  showSubscribe = false
 
   cover = "images/Black-Abstraction-Georgia-O-Keeffe.upscaled.jpg"
   shareimage = "images/shape-shapescience-okeefe.png"
