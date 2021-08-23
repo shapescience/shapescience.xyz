@@ -124,7 +124,14 @@ spline = msp.add_spline(fit_points)
 > We could have checked we're approximating the curve closely enough, but it looked overkill... The real issue we could have faced is that some tools don't support splines, and require using circular arcs instead... Dealing with this would have required just a little more work.
 
 ## Final result
-While we decided the table legs we wanted, the carpenter confirmed it would all work out. After a couple of weeks the table arrived!
+While we decided the table legs we wanted, the machinist confirmed it would all work out. Here are some pictures of the tools used:
+
+
+{{< figure width=500 src="/images/super-ellipsis/cutting-stone.jpg" caption="Close-up: [Water jet cutter](https://en.wikipedia.org/wiki/Water_jet_cutter).">}}
+
+{{< figure width=500 src="/images/super-ellipsis/cnc-machine.jpg" caption="It's unlikely you can do it at home... (our job was done on an identical machine)">}}
+
+After a couple of weeks the table arrived!
 
 ![Super-ellipsis table](/images/super-ellipsis/table-super-ellipsis.jpg)
 
