@@ -1,7 +1,7 @@
 # shapescience.xyz
 Arthur Flam's personnal blog.
 
-> this README is a work in progress
+[![Netlify Status](https://api.netlify.com/api/v1/badges/98cc40da-edd5-4f6b-b1d1-59eee0db3cc3/deploy-status)](https://app.netlify.com/sites/infallible-roentgen-405256/deploys)
 
 ## Domain setup with AWS
 Follow the instructions:
