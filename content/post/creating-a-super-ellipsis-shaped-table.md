@@ -5,24 +5,23 @@ title = "Creating a Super-Ellipsis table"
 author = "arthur"
 tags = ["maker","geometry"]
 image = "images/super-ellipsis/table-super-ellipsis-cropped.jpg"
-artist = "Arthur"
+artist = "Photo by Arthur Flam"
 whitelogo = true
 mathjax = true
 +++
 
-Furniture designers can be very creative when it comes to table legs. But for their tops there often isn't anything beyond circles, rectangles or ellipsis... So I made my custom super-ellipsis table !
+Furniture designers can be very creative when it comes to table legs. But for their tops there often isn't anything beyond circles, rectangles or ellipsis... So I made my custom super-ellipsis table!
 
 <!--more-->
 
-## Working with professionals
-After we finished a bookshelf with Yoni from [matab design](https://www.matab.co.il/), we mentionned that we were now looking for a dining table. A couple of weeks later he contacted us about a beautiful piece of marble he offered us to use as table-top.
+## Finding the right shape
+After we finished a bookshelf with Yoni from [matab design](https://www.matab.co.il/), we mentionned that we were now looking for a dining table. He offered to design one with us.
+
+We started thinking about the table's shape. The dimensions we had in mind were 1.6 x 1.1 meters. We wanted something _curvy_. I didn't like the solution Yoni usually goes for (below: a rectangle joining two half-disks) because it does not have a constant curvature. Ellipsis were also out, because sitting across their major axis is not comfortable. They are too "pointy".
 
 {{< figure width=350 src="/images/super-ellipsis/classical-shape-table.jpg" caption="See the curvature discontinuity?" link="https://www.instagram.com/p/CQOGHR4nnEu/">}}
 
-## The project finds its shape
-We started thinking about the shape. The dimensions we had in mind were 1.6 x 1.1 meters. We wanted something _curvy_. I didn't like the solution Yoni usually goes for (above: a rectangle joining two half-disks) because it does not have a constant curvature. Ellipsis were also out, because sitting across their major axis is not comfortable. They are too "pointy".
-
-I remembered the "super-ellipsis", a family of curves which work well as compromises between rectangle and circles. The name sounds exotic, but you've certainly seen this shape before: [iOS icons are a type of super-ellipsis called "squircles"](https://www.johndcook.com/blog/2018/02/13/squircle-curvature/).
+I remembered the "super-ellipsis", a family of curves which work well as compromises between rectangles and circles. The name sounds exotic, but you've certainly seen this shape before: [iOS icons are a type of super-ellipsis called "squircles"](https://www.johndcook.com/blog/2018/02/13/squircle-curvature/).
 
 {{< figure width=700 src="/images/super-ellipsis/superellipsis-wiki.jpg" caption="This is it 🎯." link="https://en.m.wikipedia.org/wiki/Superellipse">}}
 
@@ -72,7 +71,7 @@ From there, all that was left was interpolating our super-ellipsis with smooth s
 $$</div>
 
 
-Thanksfully the parametric version is well known:
+Thanksfully the parametric version is well-known:
 
 <div>$$
 \DeclareMathOperator{\sign}{sign}
@@ -85,7 +84,7 @@ Thanksfully the parametric version is well known:
 $$</div>
 
 
-I wrote an ugly class to sample points. With minor changes:
+I wrote some code to sample points. With minor changes:
 
 ```python
 from ezdxf.math import Vec3
@@ -110,7 +109,7 @@ class SuperEllipsis():
     yield self.sample_t(0) # close the loop
 ```
 
-Now that we can sample points, we only need to stich them together into a spline.
+Now that we can sample points, we only need to stitch them together into a spline.
 
 ```python
 fit_points = list(ellipsis.sample(n))
@@ -118,10 +117,13 @@ spline = ezdxf.math.fit_points_to_cubic_bezier(fit_points)
 spline = msp.add_spline(fit_points)
 ```
 
-**Et voilà!** We can view the results in libreCAD - in red a standard ellipsis, in white our superellipsis with $p=2.5$, using the correct $a$ and $b$ corresponding to the table's size:
+**Et voilà!** We can view the results in [libreCAD](https://librecad.org/) - in red a standard ellipsis, in white our superellipsis with $p=2.5$, 1024 samples, using the correct $a$ and $b$ corresponding to the table's size:
 
 {{< figure width=800 src="/images/super-ellipsis/librecad-superellipsis-shape-vs-ellipsis.png" caption="Super-ellipsis (white) and Ellipse (red) in libreCAD.">}}
 
+> We could have checked we're approximating the curve closely enough, but it looked overkill... The real issue we could have faced is that some tools don't support splines, and require using circular arcs instead... Dealing with this would have required just a little more work.
+
+## Final result
 While we decided the table legs we wanted, the carpenter confirmed it would all work out. After a couple of weeks the table arrived!
 
 ![Super-ellipsis table](/images/super-ellipsis/table-super-ellipsis.jpg)

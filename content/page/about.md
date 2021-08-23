@@ -25,7 +25,7 @@ I've been living since 2015 in Israel with my amazing wife Chloé and our wonder
 
 <img style="width: 100px;" alt="us three" src="/images/nous-trois.jpg">
 
-> If you are feeling hungry, visit [pitaetchocolat.com](https://pitaetchocolat.com).
+> If you are feeling hungry, visit [pitaetchocolat.com](https://pitaetchocolat.com) (French).
 
 
 
@@ -34,5 +34,5 @@ Previously, I collaborated with [ECI Telecom](http://www.ecitele.com/)'s CTO, an
 
 Back in France, I co-founded a company, Lookies. With my dear friend [Louis](https://www.linkedin.com/in/louisguthmann/), we  tried to make energy monitoring many heterogenous large buildings easier. Not *that* long ago, I worked at [Quantmetry](https://quantmetry.com), a consulting company that pionneered data science. Other experiences include the digital image specialist [DxO Labs](https://www.dxo.com/), [Rothschild & Co](https://www.rothschild.com), UBS, and the French Ministry of Finance.
 
-I graduated from [Centrale Paris (CentraleSupelec)](http://www.centralesupelec.fr/) (MS Machine Learning) and [Paris Dauphine University](http://www.dauphine.fr/fr/index.html). (BS Applied Mathematics), after a prepa at Louis le Grand.
+I graduated from [Centrale Paris (CentraleSupelec)](http://www.centralesupelec.fr/) (MS Machine Learning) and [Paris Dauphine University](http://www.dauphine.fr/fr/index.html). (BS Applied Mathematics), after studying at Louis le Grand.
 

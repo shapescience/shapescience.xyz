@@ -19,7 +19,7 @@ Contact me to organize workshops on algorithm engineering, or for consultations 
 - **Build a roadmap** to improve engineer workflows, collaboration and infrastructure across departments
 - **Implement solutions** to help your algorithm engineers and data scientists waste less time toiling with the "logistics" of preparing, organizing, comparing and sharing their experiments.
 - **Evangilize** the software engineering culture in organizations: reproduciblity, everything-as-code, data-driven...
-- **Create a Vision** fro infra/platform teams
+- **Create a Vision** for infra/platform teams
 
 
 > [Contact me](mailto:arthur.flam@gmail.com) for more information.
