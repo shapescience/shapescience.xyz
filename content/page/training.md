@@ -16,7 +16,7 @@ Contact me to organize workshops on algorithm engineering, or for consultations 
 
 ## Common pain points I can address
 - **Pragmatic advice** to help make sense of MLOps/DevOpsInfra/Cloud solutions, decide what to buy/fork/build...
-- **Build a roadmap** to improve engineer workflows, collaboration and infrastructure across departments
+- **Build a roadmap** to improve engineers' workflows, collaboration and infrastructure across departments.
 - **Implement solutions** to help your algorithm engineers and data scientists waste less time toiling with the "logistics" of preparing, organizing, comparing and sharing their experiments.
 - **Evangilize** the software engineering culture in organizations: reproduciblity, everything-as-code, data-driven...
 - **Create a Vision** for infra/platform teams
@@ -31,7 +31,7 @@ Contact me to organize workshops on algorithm engineering, or for consultations 
   * How to communicate results
   * Cultivating a product-first vision
 - **Spread the software engineering culture to algorithm engineers**
-  * Enncourage everything-as-code, reproducibility, data-driven approaches
+  * Encourage everything-as-code, reproducibility, data-driven approaches
   * Transitioning from writing scripts to building systems
   * Help everybody understand code sharing and reuse
 - **Focused in-depth sessions**

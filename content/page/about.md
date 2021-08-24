@@ -13,7 +13,7 @@ Your feedback is welcome! Do not hesitate to [contact me](mailto:arthur.flam@gma
 
 
 ## What I'm working on
-The team I'm leading at **[Samsung Semiconductors (image sensors)](https://www.samsung.com/semiconductor/image-sensor/)** is focused on "infrastructure" for algorithm R&D. It means we're responsible for improving workflows, our open-sourced R&D platform, internal libraries and applications, continuous integration processed, as well as improving collaboration across teams. **Our goal is to remove toil and help engineers achieve more.**
+The team I'm leading at **[Samsung Semiconductors (image sensors)](https://www.samsung.com/semiconductor/image-sensor/)** is focused on "infrastructure" for algorithm R&D. It means we're responsible for improving workflows, our open-sourced R&D platform, internal libraries and applications, continuous integration processes, as well as improving collaboration across teams. **Our goal is to remove toil and help engineers achieve more.**
 
 
 I started working at Samsung in 2017 as a senior algorithm engineer. We tried to promote [neuromorphic image sensors](https://inivation.com/dvs/) [[more info](https://github.com/uzh-rpg/event-based_vision_resources)]. Along the way I focused on "algorithm engineering", and this effort morphed into a **team bringup the "software engineering" culture into our organization** (CI, reproducibility, everything-as-code, data-driven...).
